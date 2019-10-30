@@ -1,7 +1,7 @@
 ---
 
+# enter keys here to deploy them or delete them if they arent needed anymore.
+
 keystodeploy:
-#  - name: Levi
-#    sshkey: ssh-rsa AAAABDdsds
-#  - name: Name2
-#    sshkey: ssh-rsa AAAABVSASDSASSSSSSSSSSSSSS
+  - name: levi
+    sshkey: ssh-rsa <key here>
