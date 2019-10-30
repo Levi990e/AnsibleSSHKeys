@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  remote_user: levi
+ 
+  tasks:
+
+  - name: Read variables
+    include_vars: '{{ item }}'
+    with_first_found:
+      - files:
+          - "default.yml"
+        paths: "./"
+
+  - name: Deploy SSH-Keys to remote host
+    authorized_key:
+      user: levi
+      key: "{{ keystodeploy|map(attribute='sshkey')|join('\n') }}"
+      exclusive: true
