@@ -1,7 +1,0 @@
----
-
-# enter keys here to deploy them or delete them if they arent needed anymore.
-
-keystodeploy:
-  - name: levi
-    sshkey: ssh-rsa <key here>

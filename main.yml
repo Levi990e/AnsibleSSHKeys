@@ -1,19 +1,18 @@
 ---
 
-- hosts: all
-  remote_user: levi
- 
+- hosts: localhost
+
+  vars:
+    ssh_users:
+      - name: alice
+        sshkey:
+          - 'ssh-rsa key-1'
+          - 'ssh-rsa key-2'
+
   tasks:
-
-  - name: Read variables
-    include_vars: '{{ item }}'
-    with_first_found:
-      - files:
-          - "default.yml"
-        paths: "./"
-
   - name: Deploy SSH-Keys to remote host
     authorized_key:
       user: levi
-      key: "{{ keystodeploy|map(attribute='sshkey')|join('\n') }}"
+      key: "{{ '\n'.join(ssh_users|map(attribute='sshkey')|flatten) }}"
+      state: present
       exclusive: true
