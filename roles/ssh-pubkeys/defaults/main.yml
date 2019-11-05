@@ -1,5 +1,0 @@
----
-ssh_keys:
-  - 'ssh-rsa key-1 user@something'
-  - 'ssh-rsa key-2 user2@something'
-user_name: levi

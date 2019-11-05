@@ -1,4 +1,4 @@
 ---
 - hosts: localhost
   roles:
-    - role: /home/levi/repos/AnsibleSSHKeys/roles/ssh-pubkeys
+    - ssh-pubkeys
