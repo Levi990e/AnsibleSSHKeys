@@ -3,5 +3,5 @@
 
 - name: Deploy SSH-Keys to remote host
   authorized_key:
-    key: "{{ '\n'.join((ssh_keys)|flatten) }}"
+    key: "{{ pubkeys.david }}\n{{ pubkeys.levi }}"
     user: "{{ user_name }}"
