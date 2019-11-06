@@ -3,3 +3,7 @@ pubkeys:
   david: "ssh-rsa key-2 user2@something"
 
 user_name: levi 
+
+authorized_keys:
+  - "{{ pubkeys.david }}"
+  - "{{ pubkeys.levi }}"
