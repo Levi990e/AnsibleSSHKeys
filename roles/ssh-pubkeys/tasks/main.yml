@@ -6,3 +6,13 @@
     key: "{{ '\n'.join(authorized_keys[inventory_hostname]) }}"
     user: "{{ user_name }}"
     exclusive: yes
+    
+- name: Insert "managed by ansible" at the end of the file
+  lineinfile:
+    path: ~/.ssh/authorized_keys
+    insertafter: EOF
+    line: "#This file is managed by Ansible"
+
+- name: This just ignores the error and the playbook continues
+  command: /bin/false
+  ignore_errors: yes
