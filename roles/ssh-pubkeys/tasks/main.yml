@@ -3,7 +3,6 @@
 
 - name: Deploy SSH-Keys to remote host
   authorized_key:
-    key: "{{ '\n'.join(authorized_keys[item.vmid]) }}"
+    key: "{{ '\n'.join(authorized_keys[inventory_hostname]) }}"
     user: "{{ user_name }}"
     exclusive: yes
-  loop: "{{ manala_proxmox_instances }}"

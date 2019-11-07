@@ -5,10 +5,5 @@ pubkeys:
 user_name: levi 
 
 authorized_keys:
-  119: ["{{ pubkeys.david }}", "{{ pubkeys.levi }}"]
-  122: ["{{ pubkeys.levi }}"]
-
-
-manala_proxmox_instances:
-  - vmid: 119
-  - vmid: 122
+  localhost: ["{{ pubkeys.david }}", "{{ pubkeys.levi }}"]
+  mars.example.com: ["{{ pubkeys.levi }}"]
