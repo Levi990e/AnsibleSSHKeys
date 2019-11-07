@@ -1,0 +1,8 @@
+#localhost
+
+[testservers]
+localhost
+
+[testservers2]
+mars.example.com
+h1.example.com
