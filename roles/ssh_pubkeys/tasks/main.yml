@@ -1,0 +1,17 @@
+---
+# tasks file for ssh-pubkeys
+
+#- name: Deploy SSH-Keys to remote host
+#  authorized_key:
+#    key: "{{ '\n'.join(authorized_keys[inventory_hostname]) }}"
+#    user: "{{ user_name }}"
+#    exclusive: yes
+#    state: present
+
+
+- name: Deploy SSH-Keys to remote host
+  authorized_key:
+    key: "{{ '\n'.join(authorized_keys) }}"
+    user: "{{ user_name }}"
+    exclusive: yes
+    state: present

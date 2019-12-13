@@ -1,8 +1,6 @@
-#localhost
+mars ansible_ssh_host=mars.lab10.io ansible_user=root
+#sigma1 ansible_ssh_host=sigma1.artis.network ansible_user=root
 
 [testservers]
-localhost
-
-[testservers2]
-mars.example.com
-h1.example.com
+mars
+#sigma1

@@ -1,9 +1,0 @@
-pubkeys:
-  levi: "ssh-rsa key-1 user@something"
-  david: "ssh-rsa key-2 user2@something"
-
-user_name: levi 
-
-authorized_keys:
-  localhost: ["{{ pubkeys.david }}", "{{ pubkeys.levi }}"]
-  mars.example.com: ["{{ pubkeys.levi }}"]

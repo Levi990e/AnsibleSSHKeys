@@ -1,0 +1,7 @@
+user_name: root
+
+authorized_keys: ["{{ pubkeys.levi }}" , "{{ pubkeys.david }}"]
+
+pubkeys:
+  levi: "ssh-rsa key-1 user@something"
+  david:  "ssh-rsa key-2 user2@something"
